@@ -63,7 +63,7 @@
     border-radius: 5px;
   }
   
-.hero {
+  .hero {
     background: url("../images/hero-banner.jpg") center/100% 70vh no-repeat;
     height: 70vh;
     display: flex;
@@ -151,6 +151,13 @@
   .contact-section {
     padding: 40px 20px;
   }
+
+  .map-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0; 
+  }
+  
   
   .contact-form {
     max-width: 600px;
