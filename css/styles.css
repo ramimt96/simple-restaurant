@@ -16,11 +16,21 @@
     padding: 20px;
     background: #333;
     color: #fff;
+    position: relative;  
+    z-index: 2000;
   }
   
   .logo {
     font-size: 24px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-img {
+    width: 40px;      
+    height: auto;    
+    margin-right: 10px;
   }
   
   .nav-links {
@@ -42,7 +52,7 @@
     flex-direction: column;
     cursor: pointer;
     position: relative;
-    z-index: 11000;
+    z-index: 21000;
   }
   
   .hamburger span {
@@ -54,10 +64,8 @@
   }
   
 .hero {
-    background: url("../images/hero-banner.jpg") center/cover no-repeat;
-    
+    background: url("../images/hero-banner.jpg") center/100% 70vh no-repeat;
     height: 70vh;
-  
     display: flex;
     align-items: center;
     justify-content: center;
