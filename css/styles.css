@@ -9,7 +9,6 @@
     line-height: 1.6;
   }
   
-  /* Header & Navigation */
   header {
     display: flex;
     justify-content: space-between;
@@ -80,7 +79,7 @@
   }
   
   .hero-content p {
-    font-family: 'Open Sans', sans-serif; 
+    font-family: 'Lobster', cursive;
     font-size: 1.25rem;
     line-height: 1.5;
     margin: 0 auto;
@@ -113,7 +112,6 @@
     height: auto;
   }
   
-  /* Menu Section */
   .menu-section {
     padding: 40px 20px;
     text-align: center;
@@ -131,14 +129,21 @@
     padding: 20px;
     width: 250px;
   }
+
+  .menu-card img {
+    width: 200px;      
+    height: 200px;     
+    object-fit: cover; 
+    display: block;    
+    margin: 0 auto;    
+  }
   
-  /* About & Contact Sections */
+  
   .about-section,
   .contact-section {
     padding: 40px 20px;
   }
   
-  /* Contact Form */
   .contact-form {
     max-width: 600px;
     margin: auto;
@@ -168,7 +173,6 @@
     cursor: pointer;
   }
   
-  /* Footer */
   footer {
     background: #333;
     color: #fff;
@@ -182,7 +186,7 @@
     text-decoration: none;
   }
   
-  /* Mobile Responsive Design */
+
   @media (max-width: 768px) {
     .nav-links {
       display: none;
@@ -205,7 +209,6 @@
     }
   }
   
-  /* Active mobile menu */
   .nav-active {
     display: flex !important;
   }
