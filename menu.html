@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ramizzle's sizzles - Menu</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
   <header>
     <div class="logo">
-        <img src="images/logo.jpg" alt="Logo" class="logo-img">
-        <span>Ramizzle's Sizzles</span>
-
+      <img src="images/logo.jpg" alt="Logo" class="logo-img">
+      <span>Ramizzle's Sizzles</span>
     </div>
     <nav>
       <ul class="nav-links">
@@ -20,6 +21,9 @@
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <div class="cart-icon" onclick="toggleCart()">
+        🛒 <span id="cart-count">0</span>
+      </div>
       <div class="hamburger">
         <span></span>
         <span></span>
@@ -28,26 +32,44 @@
     </nav>
   </header>
 
+  <div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <div class="cart-total">
+        <strong>Total:</strong> <span id="cart-total">$0.00</span>
+      </div>
+      <div class="cart-buttons">
+        <button class="clear-cart" onclick="cart.clearCart()">Clear Cart</button>
+        <button class="checkout-btn" onclick="alert('Checkout functionality coming soon!')">Checkout</button>
+      </div>
+      <button class="close-cart" onclick="toggleCart()">Close</button>
+    </div>
+  </div>
+
   <section class="menu-section">
     <h2>Our Menu</h2>
     <div class="menu-items">
       <div class="menu-card">
         <h3>Ramizzle Burger</h3>
         <img src="images/image1.jpg" alt="Food 1">
-        <p>$7.99</p>
+        <p class="price">$7.99</p>
         <p>Classic flame-grilled burger topped with fresh ingredients and our secret sauce.</p>
+        <button class="add-to-cart" onclick="cart.addItem('burger', 'Ramizzle Burger', 7.99)">Add to Cart</button>
       </div>
       <div class="menu-card">
         <h3>Sizzle Fries</h3>
         <img src="images/image2.jpg" alt="Food 2">
-        <p>$4.99</p>
+        <p class="price">$4.99</p>
         <p>Crispy golden fries with a hint of spice to get your taste buds fired up.</p>
+        <button class="add-to-cart" onclick="cart.addItem('fries', 'Sizzle Fries', 4.99)">Add to Cart</button>
       </div>
       <div class="menu-card">
         <h3>Rizzle Dog</h3>
         <img src="images/image3.jpg" alt="Food 3">
-        <p>$4.99</p>
+        <p class="price">$4.99</p>
         <p>A gourmet hotdog bursting with bold flavors and condiments for that extra kick.</p>
+        <button class="add-to-cart" onclick="cart.addItem('hotdog', 'Rizzle Dog', 4.99)">Add to Cart</button>
       </div>
     </div>
   </section>
@@ -64,5 +86,7 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/cart.js"></script>
 </body>
+
 </html>

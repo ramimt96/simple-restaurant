@@ -9,8 +9,8 @@
 <body>
   <header>
     <div class="logo">
-        <img src="images/logo.jpg" alt="Logo" class="logo-img">
-        <span>Ramizzle's Sizzles</span>
+      <img src="images/logo.jpg" alt="Logo" class="logo-img">
+      <span>Ramizzle's Sizzles</span>
 
     </div>
     <nav>
@@ -28,10 +28,27 @@
     </nav>
   </header>
 
+  <div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <div class="cart-total">
+        <strong>Total:</strong> <span id="cart-total">$0.00</span>
+      </div>
+      <div class="cart-buttons">
+        <button class="clear-cart" onclick="cart.clearCart()">Clear Cart</button>
+        <button class="checkout-btn" onclick="alert('Checkout functionality coming soon!')">Checkout</button>
+      </div>
+      <button class="close-cart" onclick="toggleCart()">Close</button>
+    </div>
+  </div>
+
   <section class="contact-section">
     <h2>Contact Us</h2>
     <div class="map-container">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18...YOUR_MAP_EMBED_LINK..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0!2d-122.4!3d37.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ4JzAwLjAiTiAxMjLCsDI0JzAwLjAiVw!5e0!3m2!1sen!2sus!4v1234567890"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
     <form class="contact-form">
@@ -60,5 +77,6 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/cart.js"></script>
 </body>
 </html>
